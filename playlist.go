@@ -33,5 +33,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(tracks.Tracks[0].Track)
+	fmt.Println(tracks.Tracks[0].Track.Name)
+	fmt.Println(tracks.Tracks[0].Track.Artists[0].Name)
 }
