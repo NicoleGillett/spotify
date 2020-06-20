@@ -33,6 +33,14 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(tracks.Tracks[0].Track.Name)
-	fmt.Println(tracks.Tracks[0].Track.Artists[0].Name)
+
+	trackss := tracks.Tracks
+
+	m := make(map[string]string)
+	for _, v := range trackss {
+		m[v.Track.Name] = v.Track.Artists[0].Name
+	}
+	fmt.Println(m)
+	// fmt.Println(tracks.Tracks[0].Track.Name)
+	// fmt.Println(tracks.Tracks[0].Track.Artists[0].Name)
 }
