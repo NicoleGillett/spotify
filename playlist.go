@@ -40,7 +40,10 @@ func main() {
 	for _, v := range trackss {
 		m[v.Track.Name] = v.Track.Artists[0].Name
 	}
-	fmt.Println(m)
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
+	// fmt.Println(m)
 	// fmt.Println(tracks.Tracks[0].Track.Name)
 	// fmt.Println(tracks.Tracks[0].Track.Artists[0].Name)
 }
